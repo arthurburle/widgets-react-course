@@ -29,7 +29,10 @@ const Convert = ({ language, text }) => {
         }
       );
 
-      setTranslated(data.data.translations[0].translatedText);
+      setTranslated(
+        data.data.translations[0].translatedText ||
+          "Sorry, the API key doesn't work outside of the url 'localhost:3000' =("
+      );
     };
 
     doTranslation();

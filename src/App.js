@@ -56,11 +56,9 @@ export default () => {
           onSelectedChange={setSelected}
         />
       </Route>
-      {/*
       <Route path="/translate">
         <Translate />
       </Route>
-      */}
     </div>
   );
 };

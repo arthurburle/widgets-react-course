@@ -14,11 +14,9 @@ const Header = () => {
       <Link href="/dropdown" className="item">
         Dropdown
       </Link>
-      {/*
       <Link href="/translate" className="item">
         Translate
       </Link>
-*/}
     </div>
   );
 };
