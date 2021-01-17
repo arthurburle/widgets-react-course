@@ -37,9 +37,9 @@ const Translate = () => {
         options={options}
       />
       <hr />
-      <h3 className="ui header">Outpu</h3>
+      <h3 className="ui header">Output</h3>
       <h1 className="ui header" style={{ color: 'red', fontSize: 20 }}>
-        Este API não funciona fora da url http://localhost:3000/
+        This api only works at http://localhost:3000/
       </h1>
       {/*<Convert text={text} language={language} />*/}
     </div>
