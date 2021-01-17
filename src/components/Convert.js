@@ -38,7 +38,7 @@ const Convert = ({ language, text }) => {
   return (
     <div>
       <h1 className="ui header" style={{ color: 'red', fontSize: 20 }}>
-        Este API não funciona fora da url http://localhost:3000/
+        {translated}
       </h1>
     </div>
   );
