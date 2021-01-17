@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Convert = ({ language, text }) => {
-  const [translated, setTranslated] = useState("");
+  const [translated, setTranslated] = useState('');
   const [debouncedText, setDebouncedText] = useState(text);
 
   useEffect(() => {
@@ -18,20 +18,20 @@ const Convert = ({ language, text }) => {
   useEffect(() => {
     const doTranslation = async () => {
       const { data } = await axios.post(
-        "https://translation.googleapis.com/language/translate/v2",
+        'https://translation.googleapis.com/language/translate/v2',
         {},
         {
           params: {
             q: debouncedText,
             target: language.value,
-            key: "AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM",
+            key: 'AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM',
           },
         }
       );
 
       setTranslated(
         data.data.translations[0].translatedText ||
-          "Sorry, the API key doesn't work outside of the url 'localhost:3000' =("
+          'Este API não funciona fora da url http://localhost:3000/'
       );
     };
 
@@ -40,7 +40,9 @@ const Convert = ({ language, text }) => {
 
   return (
     <div>
-      <h1 className="ui header">{translated}</h1>
+      <h1 className="ui header" style={{ color: 'red', fontSize: 20 }}>
+        {translated}
+      </h1>
     </div>
   );
 };
