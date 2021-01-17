@@ -29,10 +29,7 @@ const Convert = ({ language, text }) => {
         }
       );
 
-      setTranslated(
-        data.data.translations[0].translatedText ||
-          'Este API não funciona fora da url http://localhost:3000/'
-      );
+      setTranslated(data.data.translations[0].translatedText);
     };
 
     doTranslation();
@@ -41,7 +38,7 @@ const Convert = ({ language, text }) => {
   return (
     <div>
       <h1 className="ui header" style={{ color: 'red', fontSize: 20 }}>
-        {translated}
+        Este API não funciona fora da url http://localhost:3000/
       </h1>
     </div>
   );
